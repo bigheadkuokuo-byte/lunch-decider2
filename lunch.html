@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>今天午餐吃什麼？</title>
+  <style>
+    body {
+      font-family: Arial, "微軟正黑體";
+      text-align: center;
+      padding-top: 80px;
+      background-color: #fff7e6;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    #result {
+      margin: 30px 0;
+      font-size: 28px;
+      color: #d35400;
+      font-weight: bold;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      background-color: #ff9f1a;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff7f0f;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🍱 今天午餐吃什麼？</h1>
+
+  <div id="result">按下按鈕讓命運決定</div>
+
+  <button onclick="pickLunch()">幫我決定！</button>
+
+  <script>
+    function pickLunch() {
+      const lunchOptions = [
+        "燒臘",
+        "鴨董",
+        "金道門",
+        "南瓜粥",
+        "阿婆",
+        "羊肉羹",
+        "鍋燒",
+        "楊記"
+      ];
+
+      const randomIndex = Math.floor(Math.random() * lunchOptions.length);
+      document.getElementById("result").innerText = lunchOptions[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
